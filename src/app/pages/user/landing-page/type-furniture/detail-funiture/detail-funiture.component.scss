@@ -1,0 +1,21 @@
+.tag-new {
+  @apply py-1 px-2 font-bold;
+  color: white;
+  background: #bda7b5;
+}
+.action{
+  background: #fafafa;
+  padding: 24px;
+  @apply mt-2 grid grid-cols-4 gap-4;
+}
+.wishlist{
+  @apply flex justify-center items-center mt-4 pb-4 col-span-4 mt-3;
+  border-bottom: 1px solid #eaeaea;
+}
+::ng-deep {
+.product-similar{
+    .ant-collapse-header{
+      padding-left:0 !important ;
+    }
+  }
+}

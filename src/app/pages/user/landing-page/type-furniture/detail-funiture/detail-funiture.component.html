@@ -1,0 +1,82 @@
+<div class="contaiter">
+  <p class="title">RUGS</p>
+  <div class="grid grid-cols-2 gap-4">
+    <div class="col-span-1">
+      <div class="image-funiture">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0265/0083/products/gan-rugs-the-crochet-trio-mix-rug_580x.jpg?v=1668153229"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="col-span-1">
+      <div class="flex justify-between">
+        <span class="title font-bold">GAN RUGS</span>
+        <span class="tag-new title-xs">NEW</span>
+      </div>
+      <div class="infor mt-2">
+        <p class="text-3xl font-normal font-sans">The Crochet Trio Mix Rug</p>
+        <p class="font-semibold mt-2">$2.490.00</p>
+        <p class="mt-2">Starting at $225/mo with Affirm</p>
+      </div>
+      <div class="action">
+        <span class="col-span-1 flex items-center">$2.490.00</span>
+        <input type="text" nz-input class="col-span-1" />
+        <button class="col-span-2 btn-submit">ADD TO CART</button>
+      </div>
+      <div class="wishlist link">
+        <span nz-icon nzType="heart" nzTheme="outline" class="mr-2"></span>
+        {{ "ADD TO WISHLIST" | uppercase }}
+      </div>
+      <div class="border-bottom-common pb-4 pt-4">
+        <ul class="leading-8">
+          <li>
+            <span class="font-medium text-xs">Shipping Cost: </span>&nbsp; Free
+            Shipping
+          </li>
+          <li>
+            <span class="font-medium text-xs">Shipping Time: </span> &nbsp;<span
+              >Ships in 16-18 weeks.</span
+            >
+          </li>
+          <li>
+            <span class="font-medium text-xs"
+              >Shipping with Confidence:&nbsp; </span
+            >30 Day Returns
+          </li>
+        </ul>
+      </div>
+      <div class="border-bottom-common pb-4 pt-4">
+        <a href="">VIEW PRODUCT INFORMATION</a>
+      </div>
+      <div class="border-bottom-common pb-4 pt-4">
+        <nz-collapse  class="product-similar" nzGhost [nzBordered]="false" nzExpandIconPosition="right">
+          <nz-collapse-panel #p [nzHeader]="product" [nzExpandedIcon]="expandedIcon">
+            <ul role="list" class="grid grid-cols-2">
+              <ng-container *ngFor="let item of listProductSimilar">
+                <li class="col-span-1 marker:text-black list-disc space-y-3 text-black">
+                  {{ item.name }}
+                </li>
+              </ng-container>
+            </ul>
+
+            <ng-template #expandedIcon let-active>
+              {{ active }}
+              <span
+                nz-icon
+                [nzType]="p.nzActive ? 'minus' : 'plus'"
+                [nzRotate]="p.nzActive ? 180 : -90"
+                class="ant-collapse-arrow"
+              ></span>
+            </ng-template>
+            <ng-template #product>
+              <span class="title-lg font-semibold"
+                >DISCOVER SIMILAR PRODUCTS</span
+              >
+            </ng-template>
+          </nz-collapse-panel>
+        </nz-collapse>
+      </div>
+    </div>
+  </div>
+</div>
